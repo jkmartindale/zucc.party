@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta charset='utf-8'>
+<title>Zucc Party</title>
+<style>
+  html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    background-image: url(rave.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
+  audio.controls {
+    position: absolute;
+  }
+  
+  .zucc-contain {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  
+  .zucc {
+    height: 70%;
+    transform-origin: bottom center;
+    transform: translate(0, 7.5%) rotate(-0.01turn);
+    animation-name: zuccdance;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes zuccdance {
+    0% {
+      transform: translate(0, 7.5%) rotate(-0.01turn);
+    }
+    10% {
+      transform: translate(0, 7.5%) rotate(-0.005turn);
+    }
+    20% {
+      transform: translate(0, 7.5%) rotate(-0.01turn);
+    }
+    50% {
+      transform: translate(0, 7.5%) rotate(0.05turn);
+    }
+    60% {
+      transform: translate(0, 7.5%) rotate(0.045turn);
+    }
+    70% {
+      transform: translate(0, 7.5%) rotate(0.05turn);
+    }
+    100% {
+      transform: translate(0, 7.5%) rotate(-0.01turn);
+    }
+  }
+  
+  .attribution {
+    position: absolute;
+    bottom: 0;
+    color: white;
+  }
+  
+  .attribution a {
+    color: #ccc;
+  }
+  
+  .attribution a:visited {
+    color: #999;
+  }
+</style>
+</head>
+<body>
+<audio autoplay class='controls' controls loop volume='0.5'>
+<source src='the_end.ogg' type='audio/ogg'>
+<source src='the_end.mp3' type='audio/mpeg'>
+</audio>
+<div class='attribution'>
+<p>Image background by <a href="https://www.flickr.com/photos/128202484@N04/15357347256/">K B on Flickr</a>, CC-BY-NC 2.0<br />
+Song is <a href="http://www.neilcic.com/mouthmoods/">"The End"</a> by Niel Cicirega</p>
+</div>
+<div class='zucc-contain'>
+<img class='zucc' src='zucc.png'>
+</div>
+</body>
